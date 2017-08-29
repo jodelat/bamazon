@@ -59,7 +59,7 @@ setTimeout(function(){
             });
           });
           console.log("You have bought " + answer.stock + " " + res[answer.items - 1].product_name);
-          console.log("Your total:" + "\nPrice:" + res[answer.items - 1].price * answer.stock + "\n---------------");
+          console.log("Your total:" + "\nPrice:$" + res[answer.items - 1].price * answer.stock + "\n---------------");
         }
         else{
           console.log("We only have " + res[answer.items - 1].stock + " available. Terminating purchase..." + "\n----------------");
