@@ -51,9 +51,8 @@ setTimeout(function(){
 
             var total = res[0].stock - answer.stock;
             connection.query("UPDATE products SET stock = " + total + " WHERE item_id = " + answer.items + ";", function(err, res){
-              if (err){
-                console.log(err);
-              }
+              if (err) throw err;
+
               console.log("purchase complete...");
               console.log("stock units decreased to " + total);
               connection.end();
